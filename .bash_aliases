@@ -17,3 +17,5 @@ alias la='ls -lahFi'
 alias ff='clear; fastfetch'
 
 PS1="\[\e[0m\]\[\e[0;32m\][\u]\[\e[0m\] @ \[\e[0;36m\][\h]\[\e[0m\] in \[\e[0;34m\][\w]\[\e[0m\]\n\[\e[0;32m\]$\[\e[0m\] "
+
+
