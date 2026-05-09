@@ -1,0 +1,21 @@
+[Animation]
+Frames=41
+UseWMAssist=false
+
+[Appearance]
+HideSkinBorders=true
+Translucency=true
+
+[Desktop Entry]
+DefaultProfile=bash.profile
+
+[Dialogs]
+FirstRun=false
+
+[Window]
+Height=90
+KeepOpen=false
+Position=86
+ShowTabBar=false
+ShowTitleBar=false
+Width=30

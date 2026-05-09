@@ -1,0 +1,11 @@
+[Desktop Entry]
+DefaultProfile=bash.profile
+
+[General]
+ConfigVersion=1
+
+[Notification Messages]
+CloseAllTabs=false
+
+[UiSettings]
+ColorScheme=
