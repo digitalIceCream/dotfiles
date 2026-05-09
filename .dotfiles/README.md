@@ -5,7 +5,7 @@ Instructions here https://developer.atlassian.com/blog/2016/02/best-way-to-store
 ```sh
 git clone --bare git@github.com:digitalIceCream/dotfiles.git $HOME/.cfg
 function config {
-   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
+   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
 }
 mkdir -p .config-backup
 config checkout
