@@ -12,16 +12,17 @@
 
 test -s ~/.alias && . ~/.alias || true
 
+if [ -f ~/.bash_aliases ]; then
+	source ~/.bash_aliases
+fi
+
+function config {
+  /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
+}
+
 # Own aliases here
 
-alias ff='clear; fastfetch'
 alias python='python3'
-
-alias l='ls -lh'
-alias ll='ls -lah'
-alias la='ls -lahFi'
 alias dup='dup.sh'
 alias dupoff='dupoff.sh'
 alias btp='backup-to-pi.sh'
-
-PS1="\[\e[0m\]\[\e[0;32m\][\u]\[\e[0m\] @ \[\e[0;33m\][\h]\[\e[0m\] in \[\e[0;34m\][\w]\[\e[0m\]\n\[\e[0;32m\]$\[\e[0m\] "
