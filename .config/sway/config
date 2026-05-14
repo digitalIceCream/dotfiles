@@ -154,5 +154,5 @@ exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
 exec systemctl --user set-environment XDG_SESSION_DESKTOP=sway
 exec systemctl --user set-environment XDG_SESSION_TYPE=wayland
 
-include ~/.config/sway/autostart
 include ~/.config/sway/config.d/*
+include ~/.config/sway/autostart

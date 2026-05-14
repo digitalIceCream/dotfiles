@@ -1,0 +1,61 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 8,
+
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "custom/gpu", "pulseaudio", "custom/logout"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "interval": 2
+    },
+
+    "memory": {
+        "format": "󰘚 {percentage}%",
+        "interval": 2
+    },
+
+    "temperature": {
+        "format": "  {temperatureC}°C"
+    },
+
+    "custom/gpu": {
+        "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent",
+        "format": "󰾲  {}%",
+        "interval": 2
+    },
+
+    "network": {
+        "format-ethernet": "  {bandwidthUpBytes}   {bandwidthDownBytes}",
+        "format-disconnected": "󰌙 disconnected",
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "custom/logout": {
+        "format": "⏻",
+	"on-click": "swaymsg 'mode \"What to do? (l) lock, (e) logout, (r) reboot, (s) suspend, (Shift+s) shutdown\"'",
+        "tooltip": false
+    }
+}
