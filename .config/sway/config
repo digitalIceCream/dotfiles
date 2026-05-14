@@ -15,22 +15,6 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty --config-file /etc/alacritty/alacritty.toml
 
-# Your preferred application launcher
-set $menu wofi
-
-
-### Input configuration
-#
-# Example configuration:
-#
-   input * {
-	xkb_layout de
-	xkb_variant nodeadkeys
-   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-
 ### Key bindings
 #
 # Basics:
@@ -42,7 +26,7 @@ set $menu wofi
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym Mod1+space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -55,7 +39,7 @@ set $menu wofi
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -132,24 +116,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-# it is set in config.d/50-openSUSE.conf
-#bar {
-#    position top
-#
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-#
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
 exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
 exec systemctl --user set-environment XDG_SESSION_DESKTOP=sway
 exec systemctl --user set-environment XDG_SESSION_TYPE=wayland

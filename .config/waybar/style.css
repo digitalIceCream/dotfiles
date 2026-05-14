@@ -1,5 +1,5 @@
 * {
-    font-family: "Hack Nerd Font", "Hack Nerd Font Mono";
+    font-family: "Hack Nerd Font Mono";
     font-size: 13px;
     border: none;
     border-radius: 0;
@@ -42,4 +42,9 @@ window#waybar {
     color: #f7768e;
     font-size: 16px;
     padding-right: 16px;
+}
+
+#mode {
+    color: #f7768e;
+    padding: 0 12px;
 }
