@@ -1,0 +1,29 @@
+# autostart — apps launched on sway startup via systemd user units
+# using systemd-run gives each app its own unit for easier debugging
+# check status with: systemctl --user status <unitname>
+
+# ws1: admin
+for_window [app_id="org.keepassxc.KeePassXC"] move to workspace $ws1
+exec systemd-run --user --unit=keepassxc /usr/bin/keepassxc
+
+for_window [app_id="firefox"] move to workspace $ws1
+#exec systemd-run --user --unit=firefox-syncthing /usr/bin/firefox http://127.0.0.1:8384
+
+# ws2: chat
+for_window [app_id="Signal"] move to workspace $ws2
+exec systemd-run --user --unit=signal /usr/bin/signal-desktop --ozone-platform=wayland
+
+for_window [app_id="telegramdesktop"] move to workspace $ws2
+for_window [app_id="org.telegram.desktop"] move to workspace $ws2
+exec systemd-run --user --unit=telegram /usr/bin/env XDG_CURRENT_DESKTOP=GNOME Telegram
+
+# ws3: mail
+for_window [app_id="thunderbird"] move to workspace $ws3
+exec systemd-run --user --unit=thunderbird /usr/bin/thunderbird
+
+# ws4: notes
+for_window [app_id="net.cozic.joplin_desktop"] move to workspace $ws4
+exec systemd-run --user --unit=joplin /usr/bin/flatpak run net.cozic.joplin_desktop
+
+# ws5: work
+#exec systemd-run --user --unit=firefox-work /usr/bin/kitty
