@@ -16,9 +16,14 @@ if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
 
+# git bare for config, see github README
 function config {
   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
 }
+
+# enable fzf integration
+
+eval "$(fzf --bash)"
 
 # Own aliases here
 
