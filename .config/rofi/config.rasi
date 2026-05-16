@@ -1,14 +1,14 @@
-@theme "/home/jpv/.local/share/rofi/themes/tokyo-night.rasi"
+/*@theme "/home/jpv/.local/share/rofi/themes/tokyo-night.rasi"*/
 
-/* @theme "tokyo-night"
+@theme "tokyo-night"
 configuration {
-/*	modes: "window,drun,run,ssh";*/
-/*	font: "mono 12";*/
+	modes: "script:/home/jpv/.config/rofi/scripts/filesearch.sh,combi,filebrowser";
+	font: "Hack Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-/*	show-icons: false;*/
+	show-icons: true;
 /*	preview-cmd: ;*/
 /*	on-selection-changed: ;*/
 /*	on-mode-changed: ;*/
@@ -44,7 +44,7 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-/*	combi-modes: "window,run";*/
+	combi-modes: "drun,run,filebrowser,script:/home/jpv/.config/rofi/scripts/filesearch.sh";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
