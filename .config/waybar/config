@@ -64,7 +64,7 @@
 
     "custom/logout": {
         "format": "⏻",
-	"on-click": "swaymsg 'mode \"What to do? (l) lock, (e) logout, (r) reboot, (s) suspend, (Shift+s) shutdown\"'",
+	"on-click": "/home/jpv/.config/rofi/scripts/powermenu.sh",
         "tooltip": false
     },
 "sway/mode": {

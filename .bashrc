@@ -21,9 +21,20 @@ function config {
   /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@"
 }
 
-# enable fzf integration
+#
+# fzf
+## enable fzf integration
 
 eval "$(fzf --bash)"
+
+# Open file with xdg-open via fzf
+fzf-open() {
+    local file
+    file=$(fzf --preview 'cat {}' 2>/dev/null)
+    [ -n "$file" ] && xdg-open "$file"
+}
+bind '"\C-o": "fzf-open\n"'
+
 
 # Own aliases here
 

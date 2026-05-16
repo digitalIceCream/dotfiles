@@ -2,7 +2,7 @@
 
 @theme "tokyo-night"
 configuration {
-	modes: "script:/home/jpv/.config/rofi/scripts/filesearch.sh,combi,filebrowser";
+	modes: "combi,calc,window,drun,run,filebrowser";
 	font: "Hack Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -33,8 +33,8 @@ configuration {
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
-/*	sorting-method: "normal";*/
+	sort: true;
+	sorting-method: "fzf";
 /*	case-sensitive: false;*/
 /*	case-smart: false;*/
 /*	cycle: true;*/
@@ -44,8 +44,8 @@ configuration {
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-	combi-modes: "drun,run,filebrowser,script:/home/jpv/.config/rofi/scripts/filesearch.sh";
-/*	matching: "normal";*/
+	combi-modes: "drun,run,window";
+	matching: "fuzzy";
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	filter: ;*/
@@ -71,13 +71,14 @@ configuration {
 /*	completer-mode: "filebrowser";*/
 /*	imdkit: true;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
-/*	display-window: ;*/
-/*	display-run: ;*/
-/*	display-ssh: ;*/
-/*	display-drun: ;*/
-/*	display-combi: ;*/
+	display-window: "Windows (the good kind):";
+	display-run: "Run" ;
+	display-ssh: "Secure Shell";
+	display-drun: "Apps";
+	display-combi: "Combi";
+	display-calc: "Natural Language Calculator";
 /*	display-keys: ;*/
-/*	display-filebrowser: ;*/
+	display-filebrowser: "Files";
 /*	display-recursivebrowser: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
