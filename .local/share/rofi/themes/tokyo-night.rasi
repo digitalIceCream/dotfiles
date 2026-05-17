@@ -1,0 +1,57 @@
+* {
+    background-color:   #0a1628;
+    text-color:         #c0caf5;
+}
+
+window {
+    background-color:   #0a1628;
+    border:             1px;
+    border-color:       #7dcfff;
+    border-radius:      2px;
+    width:              900px;
+}
+
+mainbox {
+    padding:    8px;
+}
+
+inputbar {
+    background-color:   #1a2f4a;
+    border-radius:      4px;
+    padding:            5px;
+    margin:             0 0 8px 0;
+    children:           [ prompt, entry ];
+}
+
+prompt {
+    text-color:     #7dcfff;
+    padding:        0 8px 0 0;
+}
+
+entry {
+    text-color:     #c0caf5;
+}
+
+listview {
+    lines:      16;
+    scrollbar:  true;
+}
+
+element {
+    padding:        4px 8px;
+    border-radius:  4px;
+}
+
+element selected {
+    background-color:   #1a2f4a;
+    text-color:         #7dcfff;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+element-icon {
+    size:       1.2em;
+    padding:    0 5px 0 0;
+}

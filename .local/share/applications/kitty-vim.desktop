@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Vim
+Exec=kitty vim %f
+Type=Application
+MimeType=text/plain;text/x-shellscript;text/x-python;
+NoDisplay=false
