@@ -7,7 +7,7 @@
 
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "custom/gpu", "pulseaudio", "custom/logout", "sway/mode"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "custom/gpu", "pulseaudio", "custom/brightness", "custom/logout", "sway/mode"],
 
 "sway/workspaces": {
     "disable-scroll": true,
@@ -61,6 +61,15 @@
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
+    "custom/brightness": {
+    "exec": "~/.config/sway/scripts/brightness.sh get",
+    "format": "☀ {}%",
+    "signal": 9,
+    "on-scroll-up": "~/.config/sway/scripts/brightness.sh up",
+    "on-scroll-down": "~/.config/sway/scripts/brightness.sh down",
+    "on-click": "~/.config/sway/scripts/brightness.sh left_click",
+    "on-click-right": "~/.config/sway/scripts/brightness.sh right_click"
+},
 
     "custom/logout": {
         "format": "⏻",
