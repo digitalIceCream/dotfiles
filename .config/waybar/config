@@ -15,8 +15,7 @@
     "persistent-workspaces": {
 	"1 [admin]": [],
 	"2 [chat]": [],
-	"3 [mail]": [],
-	"4 [notes]": [],
+	"3 [mail]": [],"4 [notes]": [],
 	"5 [work]": [],
 	"6 [media]": []
     }
@@ -42,7 +41,9 @@
     },
 
     "network": {
+	"interface": "wlp61s0",
         "format-ethernet": "  {bandwidthUpBytes}   {bandwidthDownBytes}",
+        "format-wifi": " {essid}  {bandwidthUpBytes}   {bandwidthDownBytes}",
         "format-disconnected": "󰌙 disconnected",
         "interval": 2
     },
