@@ -7,7 +7,7 @@
 
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "custom/gpu", "pulseaudio", "custom/brightness", "custom/logout", "sway/mode"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "pulseaudio", "custom/brightness", "custom/logout", "sway/mode"],
 
 "sway/workspaces": {
     "disable-scroll": true,
@@ -39,12 +39,6 @@
 
     "temperature": {
         "format": "  {temperatureC}°C"
-    },
-
-    "custom/gpu": {
-        "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent",
-        "format": "󰾲  {}%",
-        "interval": 2
     },
 
     "network": {
