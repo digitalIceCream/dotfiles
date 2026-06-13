@@ -12,15 +12,12 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
-set $term kitty
-
 ### Key bindings
 #
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $$term
+    bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
