@@ -33,12 +33,18 @@ fzf-open() {
     file=$(fzf --preview 'cat {}' 2>/dev/null)
     [ -n "$file" ] && xdg-open "$file"
 }
+## rebind find file to CTRL+F and unbind default CTRL+T
+bind -x '"\C-f": "fzf-file-widget"'
+bind '"\C-t": ""'
+## CTRL-O to fuzzy file find and open with xdg-open
 bind '"\C-o": "fzf-open\n"'
 
-
-# Own aliases here
-
-alias python='python3'
-alias dup='dup.sh'
-alias dupoff='dupoff.sh'
-alias btp='backup-to-pi.sh'
+# Terminal welcome message
+echo ""
+echo "  fzf shortcuts:"
+echo "  Ctrl+R    fuzzy history search"
+echo "  Ctrl+F    fuzzy file find, paste path"
+echo "  Ctrl+O    fuzzy file find, open with xdg-open"
+echo "  Alt+C     fuzzy cd into directory"
+echo "  Meta+Shift+V    clipboard history"
+echo ""
