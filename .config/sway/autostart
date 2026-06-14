@@ -16,6 +16,7 @@ exec systemd-run --user --unit=telegram /usr/bin/env XDG_CURRENT_DESKTOP=GNOME T
 
 # ws3: mail
 for_window [app_id="thunderbird"] move to workspace $ws3
+for_window [app_id="org.mozilla.thunderbird"] move to workspace $ws3
 exec systemd-run --user --unit=thunderbird /usr/bin/thunderbird
 
 # ws4: notes

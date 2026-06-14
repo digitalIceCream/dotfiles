@@ -7,7 +7,7 @@
 
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "pulseaudio", "custom/brightness", "custom/logout", "sway/mode"],
+    "modules-right": ["battery", "network", "cpu", "memory", "temperature", "pulseaudio", "custom/brightness", "custom/logout", "sway/mode"],
 
 "sway/workspaces": {
     "disable-scroll": true,
@@ -24,6 +24,13 @@
     "clock": {
         "format": "{:%a %d %b  %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "bat": "BAT0",
+    "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "interval": 30
     },
 
     "cpu": {
